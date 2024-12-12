@@ -1,14 +1,16 @@
 
-function Card() {
+function Card({ lolDB }) {
     return (
-        <div className="card myCard my-5">
-            <img className="card-img-top" src="..." alt="Card image cap"/>
+        lolDB.map((ele) =>
+            <div key={ele.id} className="card myCard my-5">
+                <img className="card-img-top" src={ele.img} alt="Card image cap" />
                 <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
+                    <h5 className="card-title">{ele.title}</h5>
+                    <p className="card-text">{ele.description}</p>
+                    <a href="#" className="btn btn-primary">Cliccami</a>
                 </div>
-        </div>
+            </div>
+        )
     )
 }
 

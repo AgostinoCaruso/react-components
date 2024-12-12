@@ -1,6 +1,6 @@
 function Header(){
     return(
-        <h1 className=" ">Il mio blog</h1>
+        <h1 className=" text-center">Il mio blog</h1>
     )
 }
 
